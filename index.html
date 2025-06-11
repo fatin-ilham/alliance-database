@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alliance Database System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Alliance Database System</h1>
+    <form id="cvForm">
+      <input type="text" placeholder="Full Name" id="name" required />
+      <input type="text" placeholder="Rank (e.g. Commander)" id="rank" required />
+      <input type="text" placeholder="Specialization (e.g. N7 Operative)" id="spec" required />
+      <input type="text" placeholder="Homeworld (e.g. Earth)" id="homeworld" required />
+      <input type="text" placeholder="Service History (e.g. Eden Prime, Virmire)" id="history" required />
+      <label>Upload Profile Picture:</label>
+      <input type="file" id="profilePic" accept="image/*" />
+      <button type="submit">Generate CV</button>
+    </form>
+
+    <div id="cvOutput" class="cv-card" style="display:none;">
+      <img id="outputImage" alt="Profile Picture"/>
+      <h2 id="outputName"></h2>
+      <p><strong>Rank:</strong> <span id="outputRank"></span></p>
+      <p><strong>Specialization:</strong> <span id="outputSpec"></span></p>
+      <p><strong>Homeworld:</strong> <span id="outputHomeworld"></span></p>
+      <p><strong>Service History:</strong> <span id="outputHistory"></span></p>
+      <button onclick="openImageTab()">Download Image in New Tab</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
